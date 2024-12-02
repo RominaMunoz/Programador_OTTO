@@ -1,0 +1,114 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="+Q,O#.*9DVN4$swv/(mh" x="144" y="23">
+    <statement name="DO">
+      <block type="ultrasonic_sensor" id="m`z9c2DqBfBt)6/!D4AO">
+        <field name="US_NUMBER">1</field>
+        <field name="PIN_TRIG">8</field>
+        <field name="PIN_ECHO">9</field>
+        <next>
+          <block type="otto_configuration" id="r^E`HILR59`dt9T;at(?">
+            <field name="PIN_YL">2</field>
+            <field name="PIN_YR">3</field>
+            <field name="PIN_RL">4</field>
+            <field name="PIN_RR">5</field>
+            <field name="PIN_Buzzer">13</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="otto_move" id="x;IqQw(bP[vXZPn@)IoK">
+        <field name="otto_move_sens">FORWARD</field>
+        <field name="otto_move_speed">750</field>
+        <next>
+          <block type="controls_if" id="5_HhkV,p}-F*s[[FU5s?">
+            <value name="IF0">
+              <block type="logic_compare" id="y.XL^mRq*R:uUQ)EJ8Hb">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="ultrasonic_distance" id="#NMVUncKT(Gzxp%oEW*Y">
+                    <field name="US_NUMBER">4</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="+gJD+F1*f$(Gfs{8kLO*">
+                    <field name="NUM">4</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="base_delay" id="*j7lNj.WL{31a@TO.xe.">
+                <field name="unite">s</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="717-.2MxYD)`{IGe_$VV">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="otto_sound" id="Ol=cmw^y,D5;QznRH,nT">
+                    <field name="otto_sound"> S_surprise </field>
+                    <next>
+                      <block type="otto_move" id="}XVeNukY)4T++VK~gMLe">
+                        <field name="otto_move_sens">jump</field>
+                        <field name="otto_move_speed">1000</field>
+                        <next>
+                          <block type="base_delay" id="u11O([L#e$}20=U#a@og">
+                            <field name="unite">s</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="UzSdC;4^F6;4g1j4A-,0">
+                                <field name="NUM">3</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="otto_move" id="NIhD9oUMQ]tGrv;XTK1#">
+                                <field name="otto_move_sens">LEFT</field>
+                                <field name="otto_move_speed">1000</field>
+                                <next>
+                                  <block type="base_delay" id="~WRFQDyEh!:!GlItiIT[">
+                                    <field name="unite">s</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="*8TZoD_SAGNECf,X@b$K">
+                                        <field name="NUM">3</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="otto_move" id="4[S~h}9^~#_($45L,X0z">
+                                        <field name="otto_move_sens">jump</field>
+                                        <field name="otto_move_speed">1000</field>
+                                        <next>
+                                          <block type="otto_sound" id="CMmu9z~$ds;o?imf3J!(">
+                                            <field name="otto_sound">S_happy_short</field>
+                                            <next>
+                                              <block type="base_delay" id="o@`3-J~#$EmK!iX6W7X$">
+                                                <field name="unite">s</field>
+                                                <value name="DELAY_TIME">
+                                                  <shadow type="math_number" id=",Ii;jD^empKuULoO[`gS">
+                                                    <field name="NUM">3</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

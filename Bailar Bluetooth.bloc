@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="UMk0U|l99Hap)j,Udz*~" x="438" y="70">
+    <statement name="DO">
+      <block type="otto_configuration" id="xLR-]qV}@E;)k;yfeQIU">
+        <field name="PIN_YL">2</field>
+        <field name="PIN_YR">3</field>
+        <field name="PIN_RL">4</field>
+        <field name="PIN_RR">5</field>
+        <field name="PIN_Buzzer">13</field>
+        <next>
+          <block type="ultrasonic_sensor" id="G*O*-.TpBRvO(6L,E43*">
+            <field name="US_NUMBER">1</field>
+            <field name="PIN_TRIG">8</field>
+            <field name="PIN_ECHO">9</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="otto_home" id="B10NSyQ0/bXQ2DRr$J(W">
+        <next>
+          <block type="otto9_app" id="7,e!~blQauS2E?v80yoe"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

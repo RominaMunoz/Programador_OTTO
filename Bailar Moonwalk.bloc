@@ -1,0 +1,53 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="e{{Vnvx5YUj+4Ot`d+E=" x="186" y="77">
+    <statement name="DO">
+      <block type="otto_configuration" id="_xh5yF{_ngSf]z7J#8~#">
+        <field name="PIN_YL">2</field>
+        <field name="PIN_YR">3</field>
+        <field name="PIN_RL">4</field>
+        <field name="PIN_RR">5</field>
+        <field name="PIN_Buzzer">13</field>
+        <next>
+          <block type="ultrasonic_sensor" id="kli;8:(c#m^,n36ZE,Z2">
+            <field name="US_NUMBER">1</field>
+            <field name="PIN_TRIG">8</field>
+            <field name="PIN_ECHO">9</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="otto_home" id="t*7tgy:{~0yT;seN@J%U">
+        <next>
+          <block type="base_delay" id="%hKTlZld_k4lYQhx#[r,">
+            <field name="unite">s</field>
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="3XR!l24E%G5dX78N4GEC">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="otto_gesture" id="[i0]tygP=8bl.:XYA:rI">
+                <field name="otto_gesture">OttoSuperHappy</field>
+                <next>
+                  <block type="otto_gesture" id="G@di,jqb~Y2kq4IwH!p*">
+                    <field name="otto_gesture">OttoSuperHappy</field>
+                    <next>
+                      <block type="otto_gesture" id="VX_m(M5=lOABBwbxhY8q">
+                        <field name="otto_gesture">OttoSuperHappy</field>
+                        <next>
+                          <block type="otto9_smooth" id="+V-*Ne=5+WEe[oP0~)D5"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
